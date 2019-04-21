@@ -3,6 +3,7 @@ $(document).ready(function () {
     var topics = ["Mean Girls", "Patrick Star", "Chilling Adventures of Sabrina", "Code Lyoko", "Pokemon"];
     //loop through topics array to display button in buttonContainer
     function createButtons() {
+        //prevent duplicate buttons
         $("#buttonContainer").empty();
         for (var i = 0; i < topics.length; i++) {
             //new element for button to be created
@@ -16,13 +17,15 @@ $(document).ready(function () {
     }
 
     createButtons();
-    //Clicking Submit button will trim search, push into topics array, and create a button for newTopic
+    //Clicking Submit button will trim search 
     $("#addButton").on("click", function (event) {
         event.preventDefault();
         var inputText = $("#topicInput").val().trim();
+        //push into topics array
         topics.push(inputText);
         console.log(topics);
         $("#topicInput").val('');
+        //create a button for newTopic
         createButtons();
     });
     function displayTopic() {
@@ -51,22 +54,21 @@ $(document).ready(function () {
                 var title = $("<p>").text("Title: " + results[i].title.toUpperCase());
                 title.attr("id", "title");
                 console.log(title);
-                var tag = results[i].tag;
-                console.log(tag);
                 //create img container for topic images
                 var topicImage = $("<img>");
                 //create <p> containing results[i].rating and capitalize
                 var p = $("<p>").text("Rating: " + rating.toUpperCase());
                 p.attr("id", "rating");
-                //<img class="topicGif">
-                topicImage.addClass("topicGif");
+                //<img id="topicGif" srcdata Still, Animate, STate>
+                topicImage.attr("id", "topicGif");
                 topicImage.attr("src", results[i].images.fixed_height_still.url);
                 topicImage.attr("data-still", results[i].images.fixed_height_still.url); // still image
                 topicImage.attr("data-animate", results[i].images.fixed_height.url); // animated image
                 topicImage.attr("data-state", "still"); // set the image state
                 //append Rating to created gifDiv
-                gifDiv.append(title);
                 gifDiv.append(p);
+                //append tittle to gifDIv
+                gifDiv.append(title);
                 //append gif to created gifDiv
                 gifDiv.append(topicImage);
                 //prepend created gifDiv to existing #gifContainer
@@ -80,9 +82,8 @@ $(document).ready(function () {
 
     //buttons created with id="topic" can be clicked, and go through displayTopic 
     $(document).on("click", "#topic", displayTopic);
-
-    //Click event on gifs with class of "topicGif" executes gifState function
-    $(document).on("click", ".topicGif", gifState);
+    //img with id "topicGif" go through gifState
+    $(document).on("click", "#topicGif", gifState);
 
     // "data-state" attribute changed to "data-animate" or "data-still"
     function gifState() {
