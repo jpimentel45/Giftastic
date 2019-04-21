@@ -17,9 +17,10 @@ $(document).ready(function () {
     }
 
     createButtons();
-    //Clicking Submit button will trim search 
+    //Clicking Submit button  
     $("#addButton").on("click", function (event) {
         event.preventDefault();
+        //will grab input value & trim search
         var inputText = $("#topicInput").val().trim();
         //push into topics array
         topics.push(inputText);
@@ -79,13 +80,6 @@ $(document).ready(function () {
         });
     }
 
-
-
-    //buttons created with id="topic" can be clicked, and go through displayTopic 
-    $(document).on("click", "#topic", displayTopic);
-    //img with id "topicGif" go through gifState
-    $(document).on("click", "#topicGif", gifState);
-
     // "data-state" attribute changed to "data-animate" or "data-still"
     function gifState() {
         var state = $(this).attr("data-state");
@@ -97,6 +91,10 @@ $(document).ready(function () {
             $(this).attr("data-state", "still");
         }
     }
+    //img with id "topicGif" go through gifState
+    $(document).on("click", "#topicGif", gifState);
+    //buttons created with id="topic" can be clicked, and go through displayTopic 
+    $(document).on("click", "#topic", displayTopic);
 
 });
 //place on screen

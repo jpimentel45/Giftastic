@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Favorite Movies</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>Basic Table</h2>
+        <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <!-- The scope attribute specifies that this is a header for a column -->
+                    <th scope="col">Movie Name</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Actors</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Interstellar</td>
+                    <td>2014</td>
+                    <td>Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow</td>
+                </tr>
+                <!-- Insert additional movie rows here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // The below code fills in the first row of the table
+        var movie = "Mr. Nobody";
+        var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+
+
+            //create new table row stored into variable new row
+            var newRow = $("<tr>");
+            // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
+            // var movieName 
+            console.loge(response);
+            //3 table datas created for movie, year, actors storing data from ajax response
+            var movieName = $("<td>" + response.Title + "</td>");
+            var year = $("<td>" + response.Year + "</td>");
+            var actors = $("<td>" + response.Actors + "</td>");
+            // Append created <td> to the new table row
+            newRow.append(actors);
+            newROw.append(year);
+            newRow.append(movieName);
+            // Append the table row to <tBody>
+            $("tBody").append(newRow);
+        });
+
+        \
+    </script>
+</body>
+
+</html>
