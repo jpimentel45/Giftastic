@@ -1,6 +1,6 @@
 $(document).ready(function () {
     //Array for searched topics to be added
-    var topics = ["Mean Girls", "Patrick Star", "Chilling Adventures of Sabrina", "Code Lyoko", "Pokemon"];
+    var topics = ["Mean Girls", "Patrick Star", "Chilling Adventures of Sabrina", "Code Lyoko", "Pokemon", "Sailor Moon", "Courage The Cowardly Dog"];
     //loop through topics array to display button in buttonContainer
     function createButtons() {
         //prevent duplicate buttons
@@ -8,7 +8,7 @@ $(document).ready(function () {
         for (var i = 0; i < topics.length; i++) {
             //new element for button to be created
             var newButton = $('<button>');
-            //give button id of topic to call upon click
+            //give button id topic 
             newButton.attr("id", "topic");
             newButton.attr("data-search", topics[i]);
             newButton.text(topics[i]);
@@ -23,7 +23,7 @@ $(document).ready(function () {
         var inputText = $("#topicInput").val().trim();
         //push into topics array
         topics.push(inputText);
-        console.log(topics);
+
         $("#topicInput").val('');
         //create a button for newTopic
         createButtons();
@@ -31,29 +31,30 @@ $(document).ready(function () {
     function displayTopic() {
         // topic for giphy to "data-search"
         var topicSearch = $(this).data("search");
-        console.log(topicSearch);
+
         var APIKey = "yBQBYcU50xilufwjAwSwbvxCahLU0ZDE"; //personal API Key
 
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topicSearch + "&api_key=" + APIKey + "&limit=10"; //limit search to 10
 
-        console.log(queryURL);
 
         $.ajax({
             url: queryURL,
             method: "GET"
         }).done(function (response) {
-            console.log(response);
+
             var results = response.data;
-            console.log(results);
+
             for (var i = 0; i < results.length; i++) {
                 //create div to contain rating and gif, name it gifDiv
                 var gifDiv = $("<div>");
                 //can also directly create div with style or just create with id instead of 2 seperate lines of code
                 gifDiv.attr("id", "gifDiv");
+
                 var rating = results[i].rating;
+
                 var title = $("<p>").text("Title: " + results[i].title.toUpperCase());
+
                 title.attr("id", "title");
-                console.log(title);
                 //create img container for topic images
                 var topicImage = $("<img>");
                 //create <p> containing results[i].rating and capitalize
