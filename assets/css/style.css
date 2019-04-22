@@ -107,7 +107,7 @@ button {
         }
 }
 
-#topicForm, #gifContainer, #buttonContainer {
+#gifContainer, #buttonContainer {
         margin-top: 10px;
         margin-left: 44px;
 }
