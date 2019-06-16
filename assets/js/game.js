@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     //Array for searched topics to be added
     var topics = ["Mean Girls", "Patrick Star", "Chilling Adventures of Sabrina", "Code Lyoko", "Pokemon", "Sailor Moon", "Courage The Cowardly Dog"];
