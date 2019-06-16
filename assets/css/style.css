@@ -4,9 +4,10 @@ body {
   width: 100%;
 }
 html {
-  background-image: url("../images/boneThugz.gif");
+  background-image: url(../images/boneThugz.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
 .bounce-in-top {
   width: 100%;
   font-size: 6.5vw;
