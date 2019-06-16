@@ -3,6 +3,7 @@ html {
 }
 
 .bounce-in-top {
+  width: auto;
   text-align: center;
   font-size: 6.5vw;
   background-image: url("../images/gremlin.gif");
@@ -136,13 +137,16 @@ button {
   }
 }
 
-#gifContainer,
-#buttonContainer {
+#gifContainer {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-
+#buttonContainer {
+  flex-wrap: wrap;
+  display: flex;
+  flex: 1 1 25%;
+}
 #gifDiv {
   margin: 10px;
   background-image: url(../images/pinkStarz.gif);
@@ -150,7 +154,7 @@ button {
   display: flex;
   flex-direction: column;
   flex: 1 1 calc(33% - 30px);
-  height: fit-content;
+  height: max-content;
   box-sizing: border-box;
 }
 
