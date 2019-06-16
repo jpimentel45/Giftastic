@@ -176,8 +176,8 @@ button {
   display: flex;
   flex-direction: column;
   flex: 1 1 calc(33% - 30px);
-  /* height: max-content; */
   box-sizing: border-box;
+  text-align: center;
 }
 
 img {
