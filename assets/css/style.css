@@ -2,12 +2,13 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow: scroll;
+  position: fixed;
 }
 html {
   background-image: url(../images/boneThugz.gif);
   background-size: cover;
-  background-repeat: no-repeat;
-  height: auto;
+  height: 100%;
   background-position: 50% 50%;
 }
 .bounce-in-top {
@@ -208,6 +209,38 @@ img:hover {
 #topicInput,
 #addButton {
   margin: 5px;
+}
+
+/*media sizing for nav*/
+@media screen and (min-width: 768px) {
+  #topicForm {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex: 1;
+    justify-content: flex-start;
+    height: auto;
+    box-sizing: border-box;
+  }
+  #topicInput,
+  #topicInputs {
+    background-image: url(../images/shapez.gif);
+    color: black;
+    font-weight: bolder;
+    width: auto;
+    display: flex;
+    place-content: center;
+  }
+  .emoji {
+    flex-direction: column;
+  }
+  #addButton {
+    height: auto;
+  }
+  #topicInput {
+    flex: 2;
+  }
 }
 /* .animated {
   animation-duration: 5.5s;
