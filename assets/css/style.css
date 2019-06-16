@@ -138,13 +138,9 @@ button {
 
 #gifContainer,
 #buttonContainer {
-  flex-wrap: wrap;
-  max-height: 100%;
-  max-width: 100%;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  display: flex;
-  flex: 1 1 calc(33% - 30px);
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 #gifDiv {
@@ -154,7 +150,7 @@ button {
   display: flex;
   flex-direction: column;
   flex: 1 1 calc(33% - 30px);
-  height: 100%;
+  height: fit-content;
   box-sizing: border-box;
 }
 
