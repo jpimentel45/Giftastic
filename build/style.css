@@ -124,6 +124,7 @@ label,
   letter-spacing: 17px;
   width: 100%;
   text-align: center;
+  -webkit-background-clip: text;
 }
 
 .emoji {
