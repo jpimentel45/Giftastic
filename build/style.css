@@ -186,7 +186,7 @@ button {
 }
 
 #gifContainer {
-  display: grid;
+  display: inline-grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
