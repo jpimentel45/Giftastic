@@ -185,15 +185,9 @@ button {
   }
 }
 
-/* #gifContainer {
-  display: inline-grid;
-  grid-gap: 10px;
-  width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-} */
 #gifContainer {
   display: inline-grid;
-  grid-gap: 14px;
+  grid-gap: 10px;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
@@ -203,17 +197,8 @@ button {
   flex: 1 1 25%;
   place-content: center;
 }
-/* #gifDiv {
-  margin: 10px;
-  background-image: url(../assets/images/pinkStarz.gif);
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 calc(33% - 30px);
-  box-sizing: border-box;
-  text-align: center;
-} */
 #gifDiv {
-  /* margin: 10px; */
+  margin: 10px;
   background-image: url(../assets/images/pinkStarz.gif);
   display: flex;
   flex-direction: column;
