@@ -7,6 +7,7 @@ body {
 }
 html {
   background-image: url(../assets/images/boneThugz.gif);
+  background: currentColor;
   background-size: cover;
   height: 100%;
   background-position: 50% 50%;
@@ -43,7 +44,7 @@ html {
   );
   background-size: 80%;
   -webkit-animation: animate 8s linear infinite;
-          animation: animate 8s linear infinite;
+  animation: animate 8s linear infinite;
   font-size: 30px;
   text-align: center;
   width: -webkit-fill-available;
@@ -115,7 +116,7 @@ label,
   );
   background-size: 80%;
   -webkit-animation: animate 8s linear infinite;
-          animation: animate 8s linear infinite;
+  animation: animate 8s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
@@ -147,9 +148,9 @@ button {
 #addButton,
 button:hover {
   -webkit-animation: pulse 1s infinite;
-          animation: pulse 1s infinite;
+  animation: pulse 1s infinite;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
   height: 40px;
 }
 
