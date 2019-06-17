@@ -216,12 +216,6 @@ img {
   background-size: cover;
 }
 
-img:hover {
-  /* IE 9 */
-  /* Safari 3-8 */
-  transform: scale(1.5);
-}
-
 /*padding for buttons and topic form*/
 #topicForm {
   padding-bottom: 10px;
@@ -263,6 +257,11 @@ img:hover {
   }
   #topicInput {
     flex: 2;
+  }
+  img:hover {
+    /* IE 9 */
+    /* Safari 3-8 */
+    transform: scale(1.5);
   }
 }
 /* .animated {
