@@ -24,7 +24,7 @@ html {
 #topicInput,
 #topicInputs {
   background-image: url(../assets/images/shapez.gif);
-  color: black;
+  color: white;
   font-weight: bolder;
   font-size: 40px;
   width: 100%;
@@ -114,11 +114,11 @@ label,
     rgb(23, 7, 248),
     rgb(255, 6, 255)
   );
-  background-size: 80%;
-  -webkit-animation: animate 8s linear infinite;
-  animation: animate 8s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  /* background-size: 80%; */
+  /* -webkit-animation: animate 8s linear infinite; */
+  /* animation: animate 8s linear infinite; */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: rgba(255, 255, 255, 0); */
 }
 .p {
   letter-spacing: 17px;
