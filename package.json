@@ -1,0 +1,23 @@
+{
+  "name": "giftastic",
+  "version": "1.0.0",
+  "description": "User is able to type anything on the search bar, and add a button once the click submit. A new button will append, and will be able to search 10 images using the giphy API and display  rating, title, and gif. Each image may be clicked to change the animated state. # Requirements - Javascript - jQuery - Giphy API - Basic HTML - CSS/Reset # Access Giftastic: https://jpimentel45.github.io/Giftastic/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpimentel45/Giftastic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpimentel45/Giftastic/issues"
+  },
+  "homepage": "https://github.com/jpimentel45/Giftastic#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0"
+  }
+}
