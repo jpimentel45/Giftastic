@@ -6,7 +6,7 @@ body {
   position: fixed;
 }
 html {
-  background-image: url(../images/boneThugz.gif);
+  background-image: url(../assets/images/boneThugz.gif);
   background-size: cover;
   height: 100%;
   background-position: 50% 50%;
@@ -16,13 +16,13 @@ html {
   font-size: 6.5vw;
   display: flex;
   place-content: center;
-  background-image: url(../images/gremlin.gif);
+  background-image: url(../assets/images/gremlin.gif);
   background-size: contain;
 }
 
 #topicInput,
 #topicInputs {
-  background-image: url(../images/shapez.gif);
+  background-image: url(../assets/images/shapez.gif);
   color: black;
   font-weight: bolder;
   font-size: 40px;
@@ -129,7 +129,7 @@ label,
 
 #addButton,
 button {
-  background-image: url("../images/glitterGalaxy.gif");
+  background-image: url(../assets/images/glitterGalaxy.gif);
   color: rgb(153, 255, 0);
 }
 
@@ -172,8 +172,7 @@ button {
 }
 #gifDiv {
   margin: 10px;
-  background-image: url(../images/pinkStarz.gif);
-  flex: 1;
+  background-image: url(../assets/images/pinkStarz.gif);
   display: flex;
   flex-direction: column;
   flex: 1 1 calc(33% - 30px);
@@ -225,7 +224,7 @@ img:hover {
   }
   #topicInput,
   #topicInputs {
-    background-image: url(../images/shapez.gif);
+    background-image: url(../assets/images/shapez.gif);
     color: black;
     font-weight: bolder;
     width: auto;
