@@ -7,6 +7,7 @@ body {
 }
 html {
   background-image: url(../assets/images/boneThugz.gif);
+  background: currentColor;
   background-size: cover;
   height: 100%;
   background-position: 50% 50%;
@@ -23,7 +24,7 @@ html {
 #topicInput,
 #topicInputs {
   background-image: url(../assets/images/shapez.gif);
-  color: black;
+  color: white;
   font-weight: bolder;
   font-size: 40px;
   width: 100%;
@@ -42,10 +43,20 @@ html {
     rgb(255, 6, 255)
   );
   background-size: 80%;
+  -webkit-animation: animate 8s linear infinite;
   animation: animate 8s linear infinite;
   font-size: 30px;
   text-align: center;
   width: -webkit-fill-available;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 
 @keyframes animate {
@@ -103,15 +114,17 @@ label,
     rgb(23, 7, 248),
     rgb(255, 6, 255)
   );
-  background-size: 80%;
-  animation: animate 8s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  /* background-size: 80%; */
+  /* -webkit-animation: animate 8s linear infinite; */
+  /* animation: animate 8s linear infinite; */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: rgba(255, 255, 255, 0); */
 }
 .p {
   letter-spacing: 17px;
   width: 100%;
   text-align: center;
+  -webkit-background-clip: text;
 }
 
 .emoji {
@@ -135,7 +148,9 @@ button {
 
 #addButton,
 button:hover {
+  -webkit-animation: pulse 1s infinite;
   animation: pulse 1s infinite;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   height: 40px;
 }
@@ -146,6 +161,17 @@ button {
   width: 140px;
   height: auto;
   box-sizing: border-box;
+}
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 @keyframes pulse {
   0% {
@@ -160,8 +186,9 @@ button {
 }
 
 #gifContainer {
-  display: grid;
+  display: inline-grid;
   grid-gap: 10px;
+  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 #buttonContainer {
@@ -190,14 +217,6 @@ img {
   background-size: cover;
 }
 
-img:hover {
-  -ms-transform: scale(1.5);
-  /* IE 9 */
-  -webkit-transform: scale(1.5);
-  /* Safari 3-8 */
-  transform: scale(1.5);
-}
-
 /*padding for buttons and topic form*/
 #topicForm {
   padding-bottom: 10px;
@@ -210,6 +229,33 @@ img:hover {
   margin: 5px;
 }
 
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 425px) {
+  /* Styles */
+  #gifContainer {
+    display: inline-grid;
+    grid-gap: 10px;
+    /* height: fit-content; */
+    width: 100%;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    place-content: center;
+    /* flex: 1 1 20%; */
+  }
+  #gifDiv {
+    margin: 10px;
+    background-image: url(../assets/images/pinkStarz.gif);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
 /*media sizing for nav*/
 @media screen and (min-width: 768px) {
   #topicForm {
@@ -239,6 +285,11 @@ img:hover {
   }
   #topicInput {
     flex: 2;
+  }
+  img:hover {
+    /* IE 9 */
+    /* Safari 3-8 */
+    transform: scale(1.5);
   }
 }
 /* .animated {

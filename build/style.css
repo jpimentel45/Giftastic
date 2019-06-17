@@ -229,6 +229,33 @@ img {
   margin: 5px;
 }
 
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 425px) {
+  /* Styles */
+  #gifContainer {
+    display: inline-grid;
+    grid-gap: 10px;
+    /* height: fit-content; */
+    width: 100%;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    place-content: center;
+    /* flex: 1 1 20%; */
+  }
+  #gifDiv {
+    margin: 10px;
+    background-image: url(../assets/images/pinkStarz.gif);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
 /*media sizing for nav*/
 @media screen and (min-width: 768px) {
   #topicForm {
